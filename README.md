@@ -33,7 +33,7 @@ python main.py
 ```
 
 ## Workflow
-[image](/images/FlowChart.JPG)
+![Workflow](images/FlowChart.JPG)
 
 
 ## Project Strcture
