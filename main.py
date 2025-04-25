@@ -8,10 +8,11 @@ def main():
     print("Welcome to CLI Password Manager")
     
     # Authenticate user and get master password
-    master_password = initialize()
+    # master_password = initialize()
     
     # Derive encryption key from master password
-    key = derive_key(master_password)
+    # key = derive_key(master_password)
+    key = initialize()
 
     while True:
         print("\nChoose an option:")
