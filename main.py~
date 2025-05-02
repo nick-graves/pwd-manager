@@ -12,9 +12,7 @@ def main():
     
     # Derive encryption key from master password
     # key = derive_key(master_password)
-
-    count = 0
-    key = initialize(count)
+    key = initialize()
 
     while True:
         print("\nChoose an option:")
