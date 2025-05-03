@@ -15,6 +15,8 @@ def main():
 
     count = 0
     key = initialize(count)
+    print(key)
+
 
     while True:
         print("\nChoose an option:")
@@ -32,7 +34,7 @@ def main():
             
             if use_random == "y":
                 raw_password = password_utils.generate_password()
-                print(f"🔑 Generated password: {raw_password}")
+                print(f"Generated password: {raw_password}")
             else:
                 raw_password = input("Enter password: ").strip()
 
@@ -41,10 +43,12 @@ def main():
         elif choice == "2":
             credentials = get_credentials(key)
             for id_, url, user, pw in credentials:
-                print(f"\n ID: {id_}")
+                print("------------------------------------------------------------------")
+                print(f"ID: {id_}")
                 print(f"URL: {url}")
                 print(f"Username: {user}")
                 print(f"Password: {pw}")
+                print("------------------------------------------------------------------")
 
         elif choice == "3":
             cred_id = input("Enter ID of credential to delete: ").strip()

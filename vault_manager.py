@@ -83,7 +83,7 @@ def add_credential(key, url, username, raw_password):
                    (url, username, encrypted))
     conn.commit()
     conn.close()
-    print("🔐 Credential added.")
+    print("Credential added.")
 
 def get_credentials(key):
     conn = sqlite3.connect(DB_NAME)
