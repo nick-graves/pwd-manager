@@ -6,7 +6,7 @@
 #include "vault_manager.h"
 #include "crypto_utils.h"
 
-// valut manager constructor for database and keyfile
+// vault manager constructor for database and keyfile
 VaultManager::VaultManager(const std::string& db_path, const std::string& keyfile_path)
     : db_path_(db_path), keyfile_path_(keyfile_path), db_(nullptr) {}
 

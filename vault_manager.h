@@ -15,6 +15,7 @@ public:
     void addCredential(const std::string& name, const std::string& username, const std::string& password);
     void deleteCredential(int id);
     void listCredentials();
+    std::vector<std::tuple<int, std::string, std::string, std::string>> exportCredentials();
 
 private:
     std::string db_path_;
