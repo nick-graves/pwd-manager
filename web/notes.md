@@ -1,0 +1,1 @@
+- **View database**: ```docker exec -it web-db-1 psql -U vault_user -d vault_db```

@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: vault_user
+      POSTGRES_PASSWORD: supersecure
+      POSTGRES_DB: vault_db
+    volumes:
+      - db-data:/var/lib/postgresql/data
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5432:5432"
+
+  app:
+    build: .
+    depends_on:
+      - db
+    ports:
+      - "18080:18080"
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: vault_db
+      DB_USER: vault_user
+      DB_PASS: supersecure
+
+volumes:
+  db-data:
